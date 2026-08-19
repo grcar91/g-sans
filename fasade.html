@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-SANS</title>
+    <link rel="icon" type="image/png" href="./favicon gsans.PNG">
+    <link rel="stylesheet" href="./oblikovanje.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="naslovni-logo">
+    <a href="./index.html">
+        <img src="./naslov.png" alt="GSANS logotip" class="naslov-img">
+    </a>
+    </div>
+    <hr color="black"/>
+    <h1 class="naslovi">FASADE</h1>
+    <a href="mailto:gsans2025@gmail.com" class="mail-gumb"> E-MAIL</a>
+    <a href="tel:+38651265631" class="telefon">051 265 631</a>
+    <p class="opis">
+       Izvajamo kakovostne fasade za novogradnje in obnove starejših objektov.<br>
+       Poskrbimo za celotno izvedbo – od priprave podlage in izolacije do armirnega sloja ter zaključnega ometa.<br>
+       Pri delu uporabljamo preverjene materiale, veliko pozornosti pa namenjamo natančni izvedbi, detajlom in urejenemu gradbišču.<br>
+       Dobra fasada vašemu domu zagotavlja boljšo toplotno zaščito, lepši videz in dolgotrajno zaščito objekta.
+    </p>
+    
+    <div class="opravilaslike">
+
+      <img src="./fasada16.jpg" class="thumbnail" onclick="openModal(this.src)">
+      <img src="./fasada2.jpg" class="thumbnail" onclick="openModal(this.src)"> 
+      <img src="./fasada3.jpg" class="thumbnail" onclick="openModal(this.src)">
+
+    </div>
+    <p class="opis">
+        Za več informacij nas kontaktirajte
+    </p>
+    <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    </div>
+
+        <footer class="footer">
+
+        <div class="footer-logo">
+
+            <img src="naslov.png" alt="G-SANS">
+
+        </div>
+
+
+        <div class="footer-podatki">
+
+            <strong>G-SANS, Sašo Grčar s.p.</strong>
+
+            <span>
+                Fasaderstvo in zaključna gradbena dela
+            </span>
+
+            <span>
+                Na bregu 2, Moravske Toplice
+            </span>
+
+        </div>
+
+
+        <div class="footer-copy">
+
+            © 2026 G-SANS
+            <br>
+            Vse pravice pridržane.
+
+        </div>
+
+    </footer>
+    </div>
+</footer>
+
+    
+</body>
+</html>

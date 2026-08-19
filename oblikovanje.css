@@ -1,0 +1,777 @@
+body {
+    background-color: #080808;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+
+/* GLAVNI LOGO */
+
+.naslovni-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    justify-content: center;
+}
+
+.naslov-img {
+    width: 550px;
+    height: 200px;
+    border-radius: 10%;
+}
+
+.logo-naslov {
+    font-size: 48px;
+    background-color: #fcfcfc;
+    color: #333;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+/* EMAIL IN TELEFON */
+
+.mail-gumb,
+.telefon {
+    position: fixed;
+    top: 20px;
+    font-size: 30px;
+    background-color: #000000;
+    color: #ecbb18;
+    padding: 7px 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.mail-gumb:hover,
+.telefon:hover {
+    background-color: #393a39;
+}
+
+.mail-gumb {
+    left: 60px;
+}
+
+.telefon {
+    right: 60px;
+}
+
+/* GLAVA */
+
+#glava {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.naslovni-del {
+    width: 100%;
+    text-align: center;
+}
+
+#logo {
+    max-width: 450px;
+    flex: 0 0 40%;
+    padding: 20px;
+    border-radius: 20%;
+}
+
+/* NASLOVI */
+
+.naslovi {
+    font-size: 50px;
+    background: linear-gradient(90deg, #5e2a03, #faea12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    margin-top: 40px;
+}
+
+/* BESEDILO */
+
+p {
+    font-size: 70px;
+    color: #979797;
+}
+
+.opis {
+    color: #f4f6f8;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* =========================
+   GUMBI STORITEV
+   ========================= */
+
+#opravila {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* povezava - cel gumb */
+
+#opravila a {
+    width: 220px;
+    min-height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    background: linear-gradient(
+        145deg,
+        #101010,
+        #1d1d1d
+    );
+
+    border: 1px solid #333;
+    border-radius: 9px;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* naslov znotraj gumba */
+
+#opravila h2 {
+    margin: 0;
+    padding: 15px;
+
+    width: 100%;
+
+    background: transparent;
+
+    color: #ecbb18;
+
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: bold;
+
+    text-align: center;
+    line-height: 1.15;
+}
+
+/* HOVER - ko greš z miško čez */
+
+#opravila a:hover {
+    border-color: #ecbb18;
+
+    transform: translateY(-4px);
+
+    background: linear-gradient(
+        145deg,
+        #151515,
+        #242424
+    );
+
+    box-shadow: 0 5px 15px rgba(236, 187, 24, 0.12);
+}
+
+/* naslov ostane rumen */
+
+#opravila a:hover h2 {
+    color: #ecbb18;
+}
+
+
+
+
+/* GALERIJA */
+
+.thumbnail {
+    width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.thumbnail:hover {
+    opacity: 0.8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px #fff;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* =========================
+   KONTAKT
+   ========================= */
+
+.kontakt {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto 70px;
+    padding: 0 30px;
+}
+
+.kontakt-box {
+    flex: 1;
+
+    border: 1px solid #444;
+    border-radius: 8px;
+
+    background: linear-gradient(
+        145deg,
+        #101010,
+        #1d1d1d
+    );
+
+    text-decoration: none;
+    padding: 25px 30px;
+
+    transition: 0.3s;
+}
+
+.kontakt-box:hover {
+    border-color: #ecbb18;
+    transform: translateY(-3px);
+}
+
+.kontakt-box h2 {
+    color: #ecbb18;
+    font-family: Georgia, serif;
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.kontakt-box p {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+}
+/* =========================
+   GALERIJA NAŠA DELA
+   ========================= */
+
+.galerija-dela {
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.galerija-dela h2 {
+    color: #ecbb18;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.galerija-podnaslov {
+    color: #aaa;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+/* CELOTNA GALERIJA */
+
+.slider {
+    position: relative;
+
+    width: 100%;
+    max-width: 1320px;
+
+    margin: 0 auto;
+    padding: 0 55px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* OKNO */
+
+.slider-okno {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* VRSTA SLIK */
+
+.slider-track {
+    display: flex;
+    gap: 15px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+}
+
+.slider-track::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* SLIKE */
+
+.slider-track img {
+    flex: 0 0 400px;
+
+    width: 400px;
+    height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 10px;
+    border: 1px solid #333;
+
+    scroll-snap-align: start;
+
+    /* pomembno - brez povečevanja slike */
+    transform: none;
+
+    /* normalno glajenje slike */
+    image-rendering: auto;
+
+    transition: border-color 0.3s ease;
+}
+
+
+/* HOVER */
+
+.slider-track img:hover {
+    border-color: #ecbb18;
+
+    /* NE uporabljaj scale */
+    transform: none;
+}
+
+
+/* PUŠČICE */
+
+.slider-gumb {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 60px;
+
+    border: 1px solid #444;
+    border-radius: 8px;
+
+    background-color: #101010;
+    color: #ecbb18;
+
+    font-size: 30px;
+
+    cursor: pointer;
+    z-index: 10;
+
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.slider-gumb:hover {
+    border-color: #ecbb18;
+    background-color: #1d1d1d;
+}
+
+.slider-gumb.levo {
+    left: 0;
+}
+
+.slider-gumb.desno {
+    right: 0;
+}
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    width: 100%;
+
+    border-top: 1px solid #715900;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 4%;
+
+    background: #030303;
+
+    box-sizing: border-box;
+}
+
+.footer-logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+.footer-podatki {
+    flex: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    gap: 5px;
+
+    font-size: 14px;
+    color: #d5d5d5;
+}
+
+.footer-podatki strong {
+    color: #ecbb18;
+    font-size: 17px;
+}
+
+.footer-podatki span {
+    color: #d5d5d5;
+}
+
+.footer-copy {
+    flex: 1;
+
+    color: #aaa;
+    text-align: right;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* =========================
+   TABLICA
+   ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+    }
+
+    .naslov-img {
+        height: 150px;
+        width: 200px;
+    }
+
+    #logo {
+        width: 200px;
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    .opis {
+        font-size: 24px;
+        padding: 0 20px;
+    }
+
+    .mail-gumb {
+        font-size: 20px;
+        padding: 8px 12px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .telefon {
+        font-size: 20px;
+        padding: 8px 12px;
+        top: 15px;
+        right: 15px;
+        white-space: nowrap;
+    }
+
+    .naslovi {
+        font-size: 40px;
+    }
+
+    #slogan {
+        font-size: 38px;
+    }
+
+    .footer {
+        padding: 20px 25px;
+    }
+
+    .footer-logo img {
+        width: 80px;
+    }
+
+    .footer-podatki {
+        font-size: 12px;
+    }
+
+    .footer-podatki strong {
+        font-size: 15px;
+    }
+
+    .footer-copy {
+        font-size: 11px;
+    }
+}
+
+/* =========================
+   TELEFON
+   ========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 0;
+    }
+    #logo {
+        width: 160px;
+        max-width: 80%;
+    }
+
+    .glava-strani {
+        position: relative;
+        height: 115px;
+        width: 100%;
+    }
+
+    .naslovni-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .naslov-img {
+        width: 110px;
+        height: auto;
+    }
+
+    .mail-gumb {
+        position: absolute;
+        top: 70px;
+        left: 10px;
+
+        font-size: 12px;
+        padding: 7px 10px;
+
+        white-space: nowrap;
+    }
+
+    .telefon {
+        position: absolute;
+        top: 70px;
+        right: 10px;
+
+        font-size: 12px;
+        padding: 7px 10px;
+
+        width: auto;
+        white-space: nowrap;
+    }
+    
+    /* GALERIJA NA TELEFONU */
+
+.galerija-dela {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.galerija-dela h2 {
+    font-size: 28px;
+}
+
+.galerija-podnaslov {
+    font-size: 14px;
+}
+
+.slider {
+    padding: 0 40px;
+}
+
+.slider-track {
+    gap: 10px;
+}
+
+.slider-track img {
+    flex: 0 0 100%;
+    height: 220px;
+}
+
+.slider-gumb {
+    width: 32px;
+    height: 50px;
+    font-size: 22px;
+}
+    .opis {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+
+    #logo {
+        width: 190px;
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    .naslovi {
+        font-size: 32px;
+    }
+
+    #slogan {
+        font-size: 30px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+   #opravila {
+    gap: 10px;
+    padding: 15px 10px;
+}
+
+#opravila a {
+    width: 46%;
+    min-height: 75px;
+}
+
+#opravila h2 {
+    font-size: 15px;
+    padding: 10px 5px;
+}
+
+   /* KONTAKT NA TELEFONU */
+
+.kontakt {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+    margin: 30px auto 45px;
+    padding: 0 15px;
+
+    box-sizing: border-box;
+}
+
+.kontakt-box {
+    width: 100%;
+    min-height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 18px 15px;
+
+    box-sizing: border-box;
+}
+
+.kontakt-box h2 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.kontakt-box p {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* telefonska številka naj ostane v eni vrstici */
+
+.kontakt-box h2 {
+    white-space: nowrap;
+}
+    /* FOOTER NA TELEFONU */
+
+    .footer {
+        padding: 20px 12px;
+        gap: 10px;
+    }
+
+    .footer-logo img {
+        width: 55px;
+    }
+
+    .footer-podatki {
+        font-size: 9px;
+        gap: 3px;
+    }
+
+    .footer-podatki strong {
+        font-size: 11px;
+    }
+
+    .footer-copy {
+        font-size: 8px;
+    }
+}
