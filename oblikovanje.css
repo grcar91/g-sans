@@ -582,102 +582,131 @@ p {
 /* =========================
    TELEFON
    ========================= */
-
 @media (max-width: 480px) {
 
     body {
         padding: 0;
     }
-    #logo {
-        width: 160px;
-        max-width: 80%;
-    }
+
+    /* =========================
+       GLAVA NA TELEFONU
+       ========================= */
 
     .glava-strani {
-        position: relative;
-        height: 115px;
+        position: sticky;
+        top: 0;
+        z-index: 2000;
+
         width: 100%;
+        height: 145px;
+
+        background-color: #080808;
+        border-bottom: 1px solid #222;
+
+        box-sizing: border-box;
     }
 
     .naslovni-logo {
         position: absolute;
-        top: 0;
+        top: 8px;
         left: 50%;
+
         transform: translateX(-50%);
+
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .naslov-img {
-        width: 110px;
+        width: 210px;
         height: auto;
+        max-width: none;
+    }
+
+    .mail-gumb,
+    .telefon {
+        position: absolute;
+
+        top: 95px;
+
+        font-size: 15px;
+        font-weight: bold;
+
+        padding: 9px 12px;
+
+        background-color: #050505;
+        color: #ecbb18;
+
+        border: 1px solid #715900;
+        border-radius: 7px;
+
+        white-space: nowrap;
+
+        z-index: 2100;
     }
 
     .mail-gumb {
-        position: absolute;
-        top: 70px;
-        left: 10px;
-
-        font-size: 12px;
-        padding: 7px 10px;
-
-        white-space: nowrap;
+        left: 12px;
     }
 
     .telefon {
-        position: absolute;
-        top: 70px;
-        right: 10px;
-
-        font-size: 12px;
-        padding: 7px 10px;
-
+        right: 12px;
         width: auto;
-        white-space: nowrap;
     }
-    
-    /* GALERIJA NA TELEFONU */
 
-.galerija-dela {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.galerija-dela h2 {
-    font-size: 28px;
-}
-
-.galerija-podnaslov {
-    font-size: 14px;
-}
-
-.slider {
-    padding: 0 40px;
-}
-
-.slider-track {
-    gap: 10px;
-}
-
-.slider-track img {
-    flex: 0 0 100%;
-    height: 220px;
-}
-
-.slider-gumb {
-    width: 32px;
-    height: 50px;
-    font-size: 22px;
-}
-    .opis {
-        font-size: 20px;
-        padding: 0 15px;
-    }
+    /* GLAVNI LOGO DRUGJE NA STRANI */
 
     #logo {
         width: 190px;
         max-width: 100%;
+    }
+
+    /* =========================
+       GALERIJA NA TELEFONU
+       ========================= */
+
+    .galerija-dela {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .galerija-dela h2 {
+        font-size: 28px;
+    }
+
+    .galerija-podnaslov {
+        font-size: 14px;
+    }
+
+    .slider {
+        padding: 0 40px;
+    }
+
+    .slider-track {
+        gap: 10px;
+    }
+
+    .slider-track img {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .slider-gumb {
+        width: 32px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    /* =========================
+       BESEDILO
+       ========================= */
+
+    .opis {
+        font-size: 20px;
+        padding: 0 15px;
     }
 
     p {
@@ -694,64 +723,70 @@ p {
         margin-bottom: 40px;
     }
 
-   #opravila {
-    gap: 10px;
-    padding: 15px 10px;
-}
+    /* =========================
+       STORITVE
+       ========================= */
 
-#opravila a {
-    width: 46%;
-    min-height: 75px;
-}
+    #opravila {
+        gap: 10px;
+        padding: 15px 10px;
+    }
 
-#opravila h2 {
-    font-size: 15px;
-    padding: 10px 5px;
-}
+    #opravila a {
+        width: 46%;
+        min-height: 75px;
+    }
 
-   /* KONTAKT NA TELEFONU */
+    #opravila h2 {
+        font-size: 15px;
+        padding: 10px 5px;
+    }
 
-.kontakt {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    /* =========================
+       KONTAKT NA TELEFONU
+       ========================= */
 
-    width: 100%;
-    margin: 30px auto 45px;
-    padding: 0 15px;
+    .kontakt {
+        display: flex;
+        flex-direction: column;
 
-    box-sizing: border-box;
-}
+        gap: 12px;
 
-.kontakt-box {
-    width: 100%;
-    min-height: 90px;
+        width: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        margin: 30px auto 45px;
+        padding: 0 15px;
 
-    padding: 18px 15px;
+        box-sizing: border-box;
+    }
 
-    box-sizing: border-box;
-}
+    .kontakt-box {
+        width: 100%;
+        min-height: 90px;
 
-.kontakt-box h2 {
-    font-size: 18px;
-    margin-bottom: 7px;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-.kontakt-box p {
-    font-size: 13px;
-    line-height: 1.4;
-}
+        padding: 18px 15px;
 
-/* telefonska številka naj ostane v eni vrstici */
+        box-sizing: border-box;
+    }
 
-.kontakt-box h2 {
-    white-space: nowrap;
-}
-    /* FOOTER NA TELEFONU */
+    .kontakt-box h2 {
+        font-size: 18px;
+        margin-bottom: 7px;
+        white-space: nowrap;
+    }
+
+    .kontakt-box p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* =========================
+       FOOTER NA TELEFONU
+       ========================= */
 
     .footer {
         padding: 20px 12px;
