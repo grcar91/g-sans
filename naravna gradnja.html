@@ -1,55 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-SANS</title>
+
+    <title>Naravna gradnja | G-SANS</title>
+
     <link rel="icon" type="image/png" href="./favicon gsans.PNG">
     <link rel="stylesheet" href="./oblikovanje.css">
-    <script defer src="script.js"></script>    
+
+    <script defer src="./script.js"></script>
 </head>
+
 <body>
-    <div class="naslovni-logo">
-    <a href="./index.html">
-        <img src="./naslov.png" alt="GSANS logotip" class="naslov-img">
-    </a>
+
+    <!-- GLAVA -->
+
+    <header class="glava-strani">
+
+        <a href="mailto:gsans2025@gmail.com" class="mail-gumb">
+            E-MAIL
+        </a>
+
+        <a href="./index.html" class="naslovni-logo">
+            <img
+                src="./naslov.png"
+                alt="G-SANS logotip"
+                class="naslov-img"
+            >
+        </a>
+
+        <a href="tel:+38651265631" class="telefon">
+            051 265 631
+        </a>
+
+    </header>
+
+
+    <!-- GLAVNA VSEBINA -->
+
+    <main>
+
+        <h1 class="naslovi">
+            NARAVNA GRADNJA
+        </h1>
+
+
+        <p class="opis">
+
+            Izvajamo <strong>naravno gradnjo in obnovo objektov</strong>
+            z uporabo naravnih in okolju prijaznih materialov.<br>
+
+            Naravni materiali pomagajo uravnavati vlago v prostoru,
+            omogočajo dobro paroprepustnost ter ustvarjajo prijetno
+            in zdravo bivalno klimo.<br>
+
+            Bivanje v naravno grajeni hiši je prijetno skozi vse leto –
+            prostori so udobni, zrak prijeten, naravni materiali pa dajejo
+            domu občutek topline in domačnosti.<br>
+
+            Takšna gradnja je odlična izbira za vse, ki cenijo
+            <strong>zdravo bivanje, udobje, trajnost in povezanost z naravo</strong>.
+
+        </p>
+
+
+        <!-- SLIKE -->
+
+        <div class="opravilaslike">
+
+            <img
+                src="./ograje4.jpg"
+                class="thumbnail"
+                alt="Naravna gradnja G-SANS"
+                onclick="openModal(this.src)"
+            >
+
+        </div>
+
+
+        <p class="opis">
+            Za več informacij nas kontaktirajte
+        </p>
+
+    </main>
+
+
+    <!-- ODPRTA GALERIJA -->
+
+    <div id="imageModal" class="modal">
+
+        <span
+            class="modal-close"
+            onclick="closeModal()"
+        >
+            &times;
+        </span>
+
+        <button
+            class="modal-puscica modal-levo"
+            onclick="prejsnjaSlika()"
+            aria-label="Prejšnja slika"
+        >
+            &#10094;
+        </button>
+
+        <img
+            class="modal-content"
+            id="modalImage"
+            alt="Povečana fotografija"
+        >
+
+        <button
+            class="modal-puscica modal-desno"
+            onclick="naslednjaSlika()"
+            aria-label="Naslednja slika"
+        >
+            &#10095;
+        </button>
+
     </div>
-    <hr color="black"/>
-    <h1 class="naslovi">NARAVNA GRADNJA</h1>
-    <a href="mailto:gsans2025@gmail.com" class="mail-gumb"> E-MAIL</a>
-    <a href="tel:+38651265631" class="telefon">051 265 631</a>
-    <hr/>
-    <p class="opis">
-        Izvajamo **NARAVNO gradnjo in obnovo objektov** z uporabo naravnih in okolju prijaznih materialov.<br>
-        Naravni materiali pomagajo uravnavati vlago v prostoru, omogočajo dobro paroprepustnost ter ustvarjajo prijetno in zdravo bivalno klimo.<br>
-        Bivanje v naravno grajeni hiši je prijetno skozi vse leto – prostori so udobni, zrak prijeten,<br> 
-        naravni materiali pa dajejo domu občutek topline in domačnosti. <br>
-        Takšna gradnja je odlična izbira za vse, ki cenijo **zdravo bivanje, udobje, trajnost in povezanost z naravo**.
-</p>
-    <div class="opravilaslike">
-       <img src="./ograje4.jpg"class="thumbnail" onclick="openModal(this.src)" >
-       
-    </div>
-    <p class="opis">
-        Za več informacij nas kontaktirajte
-    </p>
-    <div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="modal-close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImage">
-     </div>
-    
-        <footer class="footer">
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
 
         <div class="footer-logo">
 
-            <img src="naslov.png" alt="G-SANS">
+            <img
+                src="./naslov.png"
+                alt="G-SANS"
+            >
 
         </div>
 
 
         <div class="footer-podatki">
 
-            <strong>G-SANS, Sašo Grčar s.p.</strong>
+            <strong>
+                G-SANS, Sašo Grčar s.p.
+            </strong>
 
             <span>
                 Fasaderstvo in zaključna gradbena dela
@@ -71,9 +163,6 @@
         </div>
 
     </footer>
-    </div>
-</footer>
 
-    
 </body>
 </html>
