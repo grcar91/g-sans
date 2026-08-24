@@ -1,58 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-SANS</title>
+
+    <title>Različni zaključki | G-SANS</title>
+
     <link rel="icon" type="image/png" href="./favicon gsans.PNG">
     <link rel="stylesheet" href="./oblikovanje.css">
-    <script defer src="script.js"></script>
+
+    <script defer src="./script.js"></script>
 </head>
+
 <body>
-    <div class="naslovni-logo">
-    <a href="./index.html">
-        <img src="./naslov.png" alt="GSANS logotip" class="naslov-img">
-    </a>
-    </div>
-    <hr color="black"/>
-    <h1 class="naslovi">RAZLIČNI ZAKLJUČKI</h1>
-    <a href="mailto:gsans2025@gmail.com" class="mail-gumb"> E-MAIL</a>
-    <a href="tel:+38651265631" class="telefon">051 265 631</a>
-    <p class="opis">
-        Poleg fasad in naravne gradnje izvajamo tudi različna zaključna in gradbena dela po meri.<br> 
-        Lotimo se projektov, kjer so pomembni dobra rešitev, natančna izvedba in občutek za detajle.<br> 
-        Izvajamo izdelavo in obnovo teras, polaganje talnih oblog, izdelavo lesenih stopnic in konstrukcij, ureditev mansard ter druga notranja in zunanja dela.<br>
-        Vsakega projekta se lotimo individualno ter skupaj z naročnikom poiščemo rešitev, ki je funkcionalna, kakovostna in prilagojena prostoru.
-    </p>
-    <div class="opravilaslike">
-        <img src="./stopnice1.jpg"class="thumbnail" onclick="openModal(this.src)" >
-        <img src="./tla1.jpg"class="thumbnail" onclick="openModal(this.src)" >
-        <img src="./tla2.jpg"class="thumbnail" onclick="openModal(this.src)" >
-        <img src="./tera1.jpg"class="thumbnail" onclick="openModal(this.src)" >
-        <img src="./tera2.jpg"class="thumbnail" onclick="openModal(this.src)" >
-        <img src="./tera3.jpg"class="thumbnail" onclick="openModal(this.src)" >
-    </div>
-    <p class="opis">
-        Za več informacij nas kontaktirajte
-    </p>
- 
-    <div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="modal-close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImage">
+
+    <!-- =========================
+         GLAVA
+         ========================= -->
+
+    <header class="glava-strani">
+
+        <a href="mailto:gsans2025@gmail.com" class="mail-gumb">
+            E-MAIL
+        </a>
+
+        <a href="./index.html" class="naslovni-logo">
+            <img
+                src="./naslov.png"
+                alt="G-SANS logotip"
+                class="naslov-img"
+            >
+        </a>
+
+        <a href="tel:+38651265631" class="telefon">
+            051 265 631
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         GLAVNA VSEBINA
+         ========================= -->
+
+    <main>
+
+        <h1 class="naslovi">
+            RAZLIČNI ZAKLJUČKI
+        </h1>
+
+
+        <p class="opis">
+            Poleg fasad in naravne gradnje izvajamo tudi različna zaključna in gradbena dela po meri.<br>
+            Lotimo se projektov, kjer so pomembni dobra rešitev, natančna izvedba in občutek za detajle.<br>
+            Izvajamo izdelavo in obnovo teras, polaganje talnih oblog, izdelavo lesenih stopnic in konstrukcij,
+            ureditev mansard ter druga notranja in zunanja dela.<br>
+            Vsakega projekta se lotimo individualno ter skupaj z naročnikom poiščemo rešitev,
+            ki je funkcionalna, kakovostna in prilagojena prostoru.
+        </p>
+
+
+        <!-- =========================
+             GALERIJA
+             ========================= -->
+
+        <div class="opravilaslike">
+
+            <img
+                src="./stopnice1.jpg"
+                class="thumbnail"
+                alt="Lesene stopnice G-SANS"
+                onclick="openModal(this.src)"
+            >
+
+            <img
+                src="./tla1.jpg"
+                class="thumbnail"
+                alt="Talne obloge G-SANS"
+                onclick="openModal(this.src)"
+            >
+
+            <img
+                src="./tla2.jpg"
+                class="thumbnail"
+                alt="Polaganje talnih oblog"
+                onclick="openModal(this.src)"
+            >
+
+            <img
+                src="./tera1.jpg"
+                class="thumbnail"
+                alt="Izdelava terase"
+                onclick="openModal(this.src)"
+            >
+
+            <img
+                src="./tera2.jpg"
+                class="thumbnail"
+                alt="Terasa G-SANS"
+                onclick="openModal(this.src)"
+            >
+
+            <img
+                src="./tera3.jpg"
+                class="thumbnail"
+                alt="Zaključena terasa"
+                onclick="openModal(this.src)"
+            >
+
+        </div>
+
+
+        <p class="opis">
+            Za več informacij nas kontaktirajte.
+        </p>
+
+    </main>
+
+
+    <!-- =========================
+         ODPRTA GALERIJA / MODAL
+         ========================= -->
+
+    <div id="imageModal" class="modal">
+
+        <!-- ZAPRI -->
+
+        <span
+            class="modal-close"
+            onclick="closeModal()"
+        >
+            &times;
+        </span>
+
+
+        <!-- PREJŠNJA SLIKA -->
+
+        <button
+            class="modal-puscica modal-levo"
+            onclick="prejsnjaSlika()"
+            aria-label="Prejšnja slika"
+        >
+            &#10094;
+        </button>
+
+
+        <!-- ODPRTA SLIKA -->
+
+        <img
+            class="modal-content"
+            id="modalImage"
+            alt="Povečana fotografija G-SANS"
+        >
+
+
+        <!-- NASLEDNJA SLIKA -->
+
+        <button
+            class="modal-puscica modal-desno"
+            onclick="naslednjaSlika()"
+            aria-label="Naslednja slika"
+        >
+            &#10095;
+        </button>
+
     </div>
 
-     <footer class="footer">
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer class="footer">
 
         <div class="footer-logo">
 
-            <img src="naslov.png" alt="G-SANS">
+            <img
+                src="./naslov.png"
+                alt="G-SANS"
+            >
 
         </div>
 
 
         <div class="footer-podatki">
 
-            <strong>G-SANS, Sašo Grčar s.p.</strong>
+            <strong>
+                G-SANS, Sašo Grčar s.p.
+            </strong>
 
             <span>
                 Fasaderstvo in zaključna gradbena dela
@@ -74,9 +210,6 @@
         </div>
 
     </footer>
-    </div>
-</footer>
 
-    
 </body>
 </html>
